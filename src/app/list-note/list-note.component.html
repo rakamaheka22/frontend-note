@@ -1,0 +1,13 @@
+<h2>List Notes</h2>
+
+<button [routerLink]="'/add-note'">Add Note</button>
+
+<ul>
+  <li *ngFor="let list of list | async">
+    {{list.judul}}
+    <br>
+    {{list.tgl}}
+    <button [routerLink]="['/edit-note', list.id]">Edit</button>
+    <button (click)="deleteNote(list.id)">Hapus</button>
+  </li>
+</ul>

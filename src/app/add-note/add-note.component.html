@@ -1,0 +1,22 @@
+<h2>Add Note</h2>
+
+<form [formGroup]="addForm" (submit)="addNote(addForm.value)">
+  <div class="forminput">
+    <label for="id">Id</label>
+    <input formControlName="id" id="id" />
+  </div>
+  <div class="forminput">
+    <label for="judul">Judul</label>
+    <input formControlName="judul" id="judul" />
+  </div>
+  <div class="forminput">
+    <label for="deskripsi">Deskripsi</label>
+    <textarea formControlName="deskripsi" id="deskripsi"></textarea>
+  </div>
+  <div class="forminput">
+    <label for="tgl">Tanggal</label>
+    <input formControlName="tgl" id="tgl" />
+  </div>
+  <button type="submit" [disabled]="!addForm.valid">Add</button>
+</form>
+

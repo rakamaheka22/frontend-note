@@ -1,0 +1,20 @@
+<h2>Edit Note</h2>
+
+<div class="forminput">
+  <label for="id">Id</label>
+  <input [(ngModel)]="note.id" id="id" readonly />
+</div>
+<div class="forminput">
+  <label for="judul">Judul</label>
+  <input [(ngModel)]="note.judul" id="judul" />
+</div>
+<div class="forminput">
+  <label for="deskripsi">Deskripsi</label>
+  <textarea [(ngModel)]="note.deskripsi" id="deskripsi"></textarea>
+</div>
+<div class="forminput">
+  <label for="tgl">Tanggal</label>
+  <input [(ngModel)]="note.tgl" id="tgl" />
+</div>
+
+<button type="submit" (click)="editNote()">Edit</button>
